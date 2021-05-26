@@ -1,6 +1,6 @@
 name: epatriote_country_flag
 description: Display country flag from your flutter app.
-version: 0.0.1
+version: 0.0.2-dev
 homepage:   https://epatriotecreative.github.io/epatriote_country_flag/
 repository: https://github.com/ePatrioteCreative/epatriote_country_flag.git
 
