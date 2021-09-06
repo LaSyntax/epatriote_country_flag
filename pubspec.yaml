@@ -12,14 +12,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  flutter_svg: ^0.22.0
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
 flutter:
 
-  # Register all country fla as an image asset
+  # Register all country flag as an image asset
   assets:
     - assets/
     - assets/flags/
