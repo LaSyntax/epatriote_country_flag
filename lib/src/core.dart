@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-//* Country flag widget
+// Country flag widget
 class EpatrioteCountryFlag extends StatelessWidget {
   const EpatrioteCountryFlag(
       {Key key,
@@ -10,15 +10,15 @@ class EpatrioteCountryFlag extends StatelessWidget {
       @required this.width,
       @required this.svg})
       : super(key: key);
-  final String country; // cette variable prend le code d'un pays en minuscule
-  final double height; // longueur
-  final double width; // largeur
+  final String country; // this variable takes the code of a country example:'bj'
+  final double height; // container's height
+  final double width; // container's width
   final bool
-      svg; // cette variable permet de savoir si l'image est un svg (true) et si non (false)
+      svg; // this variable allows you to know if the image is svg(true) and if not (false)
 
-// cette fonction permet de gerer les erreurs de saisir du code d'un pays donné
-// en cas d'erreur l'utilisateur aura une image qui lui dira erreur le code saisi n'est pas
-// dans notre base de donner ou n'existe pas
+// this function is used to manage errors when entering the code of a given country
+// in case of error the user will have an image which will tell him error the code entered is not
+// in our database to donate or does not exist
   String goodcountry(String code) {
     switch (code) {
       case 'af':
@@ -285,7 +285,7 @@ class EpatrioteCountryFlag extends StatelessWidget {
         height: height,
         width: width,
         child: svg
-            ? SvgPicture.asset("assets/svg/${goodcountry(country)}.svg")
-            : Image.asset("assets/png/${goodcountry(country)}.png"));
+            ? SvgPicture.asset("assets/svg/${goodcountry(country.toLowerCase())}.svg")// thus the function will take as parameter a code which will always be in lowercase
+            : Image.asset("assets/png/${goodcountry(country.toLowerCase())}.png"));
   }
 }
