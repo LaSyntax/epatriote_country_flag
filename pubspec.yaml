@@ -22,7 +22,5 @@ flutter:
 
   # Register all country flag as an image asset
   assets:
-    - assets/
-    - assets/flags/
-
-  
+    - assets/svg/
+    - assets/png/
